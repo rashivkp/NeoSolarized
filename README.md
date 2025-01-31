@@ -37,6 +37,14 @@ After the installation, configure it as your colorscheme by putting the followin
 ```vim
 colorscheme NeoSolarized
 ```
+- Plugin managers: [lazy.nvim](https://github.com/LazyVim/LazyVim):
+
+    - Add the file `plugins/NeoSolarized.lua` with content `return { 'overcache/NeoSolarized' }`.
+    - Add to your `init.lua`:
+    ```vim
+    vim.o.background = "light"
+    vim.cmd([[colorscheme NeoSolarized]])
+    ```
 ## Options
 Some options of the original solarized theme were removed or renamed to avoid config conflicts.
 Make sure to put configuration before the line `colorscheme NeoSolarized` in `init.vim` or `.vimrc`.
